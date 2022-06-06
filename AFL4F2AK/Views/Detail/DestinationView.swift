@@ -48,12 +48,17 @@ struct DestinationView: View {
                         }
                     }
                     
+                    
+                    
                     if !destination.address.isEmpty {
                         VStack(alignment: .leading, spacing: 20){
                             Text("Address :")
                                 .font(.headline)
                             
                             Text(destination.address)
+                            
+                            MapView(coordinate: destination.locationCoordinate)
+                                .scaledToFit()
                         }
                     }
                     
